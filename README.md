@@ -31,7 +31,22 @@ Revisa estos archivos si necesitas entendimiento rápido.
 
 Requisitos (local): Python 3.11+, Node.js 18+ (o LTS), npm
 
-Cómo ejecutar (desarrollo)
+Cómo ejecutar
+
+**Opción A: Con Docker Compose (recomendado)**
+
+```bash
+# Desde la raíz del proyecto
+docker-compose up --build
+```
+
+- Backend: `http://localhost:8000`
+- Frontend: `http://localhost` (puerto 80)
+- Ambos contenedores se comunican automáticamente
+
+Para detener: `docker-compose down`
+
+**Opción B: Local (desarrollo sin Docker)**
 
 1) Backend
 
@@ -43,7 +58,7 @@ python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 La API quedará en `http://localhost:8000` (health: `GET /health`).
 
-2) Frontend
+2) Frontend (en otra terminal)
 
 ```bash
 cd frontend
