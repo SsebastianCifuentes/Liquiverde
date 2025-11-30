@@ -1,0 +1,163 @@
+[
+  {
+    "barcode": "7613034947611",
+    "name": "Chocapic Cereal 750g",
+    "brand": "Nestlé",
+    "size": "750g",
+    "price": 3990
+  },
+  {
+    "barcode": "7802900001308",
+    "name": "Leche Natural Entera 1L",
+    "brand": "Soprole",
+    "size": "1L",
+    "price": 1180
+  },
+  {
+    "barcode": "7803110102212",
+    "name": "Arroz Grado 1 1kg",
+    "brand": "Tucapel",
+    "size": "1kg",
+    "price": 890
+  },
+  {
+    "barcode": "7613287157201",
+    "name": "Cheerios Multigrain 390g",
+    "brand": "Nestlé",
+    "size": "390g",
+    "price": 3490
+  },
+  {
+    "barcode": "8412600011812",
+    "name": "Pan Bimbo Rebanada Integral Estilo Artesano 500g",
+    "brand": "Bimbo",
+    "size": "500g",
+    "price": 2890
+  },
+  {
+    "barcode": "7809611711588",
+    "name": "Croquetas de Verduras",
+    "brand": "La Crianza",
+    "size": "400g (aprox.)",
+    "price": 3490
+  },
+  {
+    "barcode": "7801915001730",
+    "name": "Mortadela Jamonada",
+    "brand": "La Crianza",
+    "size": "200g (aprox.)",
+    "price": 1390
+  },
+  {
+    "barcode": "7802920010755",
+    "name": "Yoghurt Light Damasco 130g",
+    "brand": "Colun",
+    "size": "130g",
+    "price": 390
+  },
+  {
+    "barcode": "7802920115504",
+    "name": "Queso Ranco Laminado 150g",
+    "brand": "Colun",
+    "size": "150g",
+    "price": 1990
+  },
+  {
+    "barcode": "7802920010779",
+    "name": "Yoghurt Light Mora 120g",
+    "brand": "Colun",
+    "size": "120g",
+    "price": 390
+  },
+  {
+    "barcode": "7613039490266",
+    "name": "Nesquik Polvo 390g",
+    "brand": "Nestlé",
+    "size": "390g",
+    "price": 3490
+  },
+  {
+    "barcode": "7613035144699",
+    "name": "Nesquik Cereal 450g",
+    "brand": "Nestlé",
+    "size": "450g",
+    "price": 3690
+  },
+  {
+    "barcode": "8410494300050",
+    "name": "Pepsi Lata 330ml",
+    "brand": "Pepsi",
+    "size": "330ml",
+    "price": 650
+  },
+  {
+    "barcode": "8410494303372",
+    "name": "7UP Lima Limón 330ml",
+    "brand": "7UP",
+    "size": "330ml",
+    "price": 650
+  },
+  {
+    "barcode": "8410100065113",
+    "name": "Puré Maggi 230g",
+    "brand": "Maggi",
+    "size": "230g",
+    "price": 1390
+  },
+  {
+    "barcode": "8410100061702",
+    "name": "Caldo de Pollo Maggi 500g",
+    "brand": "Maggi",
+    "size": "500g",
+    "price": 2890
+  },
+  {
+    "barcode": "5053990127726",
+    "name": "Pringles Original 165g",
+    "brand": "Pringles",
+    "size": "165g",
+    "price": 1890
+  },
+  {
+    "barcode": "5410126006049",
+    "name": "Galletas Lotus Speculoos 125g",
+    "brand": "Lotus",
+    "size": "125g",
+    "price": 1990
+  },
+  {
+    "barcode": "7802900026622",
+    "name": "Mantequilla Soprole 200g",
+    "brand": "Soprole",
+    "size": "200g",
+    "price": 1890
+  },
+  {
+    "barcode": "7802900481063",
+    "name": "Néctar Naranja 1L",
+    "brand": "Soprole",
+    "size": "1L",
+    "price": 1290
+  },
+  {
+    "barcode": "7802900000356",
+    "name": "Yoghurt Soprole Gold 165g",
+    "brand": "Soprole",
+    "size": "165g",
+    "price": 450
+  },
+  {
+    "barcode": "7802900402105",
+    "name": "Manjarate Clásico 100g",
+    "brand": "Soprole",
+    "size": "100g",
+    "price": 890
+  },
+  {
+    "barcode": "7802900235239",
+    "name": "Soprole Zerolacto 100g",
+    "brand": "Soprole",
+    "size": "100g",
+    "price": 490
+  }
+]
