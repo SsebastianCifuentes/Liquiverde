@@ -1,6 +1,6 @@
 # === VENV ===
 venv/
-.env
+.env.local
 *.env
 
 # === PYTHON ===
