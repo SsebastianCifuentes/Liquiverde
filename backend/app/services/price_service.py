@@ -23,5 +23,6 @@ class LocalPriceService:
         data = cls._load_data()
         for item in data:
             if item.get("barcode") == barcode:
-                return float(item.get("price"))
+                price = item.get("price")
+                return float(price) if price else None
         return None

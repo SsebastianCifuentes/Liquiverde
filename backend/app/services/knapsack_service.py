@@ -1,6 +1,7 @@
 from app.services.openfoodfacts_service import OpenFoodFactsService
 from app.services.price_service import LocalPriceService
 from app.services.sustainability_service import SustainabilityService
+from app.services.impact_service import EnvironmentalImpactService
 
 class MultiObjectiveKnapsack:
 
@@ -56,8 +57,12 @@ class MultiObjectiveKnapsack:
         total_cost = sum(p["price"] for p in res)
         best_value = sum(p["value"] for p in res)
 
+        # Calcular impacto ambiental
+        environmental_impact = EnvironmentalImpactService.compute_impact_batch(res)
+
         return {
             "best_value": round(best_value, 2),
             "total_cost": round(total_cost, 2),
-            "items": res
+            "items": res,
+            "environmental_impact": environmental_impact
         }

@@ -17,3 +17,4 @@ class ShoppingListResponse(BaseModel):
     average_sustainability: float
     objective: str
     items: list
+    environmental_impact: dict  # {total_co2_kg, total_water_liters, total_waste_kg, average_impact_score}

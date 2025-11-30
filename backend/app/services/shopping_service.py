@@ -2,6 +2,7 @@ from typing import List, Dict
 from app.services.openfoodfacts_service import OpenFoodFactsService
 from app.services.price_service import LocalPriceService
 from app.services.sustainability_service import SustainabilityService
+from app.services.impact_service import EnvironmentalImpactService
 
 
 class ShoppingOptimizer:
@@ -52,9 +53,13 @@ class ShoppingOptimizer:
 
             results = sorted(results, key=balanced_score)
 
+        # Calcular impacto ambiental total
+        environmental_impact = EnvironmentalImpactService.compute_impact_batch(results)
+
         return {
             "total_price": round(total_price, 2),
             "average_sustainability": round(avg_sust, 2),
             "objective": objective,
-            "items": results
+            "items": results,
+            "environmental_impact": environmental_impact
         }

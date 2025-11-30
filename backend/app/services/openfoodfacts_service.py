@@ -39,7 +39,19 @@ class OpenFoodFactsService:
         nutr = product_data.get("nutriments", {})
 
         score = SustainabilityService.compute_score(nutr)
+        
+        # Intentar obtener precio: primero de prices.json, luego de Open Food Facts
         price = LocalPriceService.get_price_by_barcode(barcode)
+        if price is None:
+            # Fallback: extraer de Open Food Facts si está disponible
+            price = product_data.get("price")
+            if price and isinstance(price, str):
+                try:
+                    # El precio en OFF viene como string, ej: "2.99 EUR"
+                    price_str = price.split()[0].replace(",", ".")
+                    price = float(price_str) * 900  # Convertir aproximadamente a CLP
+                except (ValueError, IndexError):
+                    price = None
 
         product_dict = {
             "barcode": barcode,
