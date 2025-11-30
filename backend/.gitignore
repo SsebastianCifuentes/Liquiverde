@@ -1,0 +1,36 @@
+# === VENV ===
+venv/
+.env
+*.env
+
+# === PYTHON ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.eggs/
+
+# === SQLITE / DATOS LOCALES ===
+*.db
+products.db
+data/*.db
+data/*.sqlite
+
+# === PYTEST CACHE ===
+.pytest_cache/
+.coverage
+htmlcov/
+
+# === EDITOR / IDE ===
+.vscode/
+.idea/
+
+# === OS FILES ===
+.DS_Store
+Thumbs.db
+
+# === BUILD / DIST ===
+dist/
+build/
