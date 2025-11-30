@@ -1,3 +1,11 @@
+import asyncio
+try:
+    import uvloop
+    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+except ImportError:
+    # uvloop no está disponible (Windows), usa event loop por defecto
+    pass
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import products, shopping, knapsack

@@ -1,4 +1,4 @@
-const BASE = import.meta.env.VITE_API_BASE || 'https://laughing-space-computing-machine-pxgqrj96x6gf664q-8000.app.github.dev'
+const BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000'
 
 export async function fetchProduct(barcode) {
   const res = await fetch(`${BASE}/products/${barcode}`)
