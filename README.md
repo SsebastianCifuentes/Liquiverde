@@ -9,7 +9,7 @@ Proyecto full-stack: plataforma de retail inteligente para ahorrar dinero y redu
 - Datos de ejemplo: `backend/data/prices.json`
 
 **Estado actual**
-- Funcionalidades implementadas (mínimo obligatorio):
+- Funcionalidades implementadas:
 	- Búsqueda de productos por código de barras (Open Food Facts + caché local)
 	- Scoring de sostenibilidad (heurístico 0-100)
 	- Generador de listas optimizadas multi-criterio (precio, salud, balanceado)
@@ -27,26 +27,11 @@ Proyecto full-stack: plataforma de retail inteligente para ahorrar dinero y redu
 	- `backend/data/prices.json` - dataset de ejemplo (precios)
 - `frontend/` - app React + Vite
 
-Revisa estos archivos si necesitas entendimiento rápido.
-
 Requisitos (local): Python 3.11+, Node.js 18+ (o LTS), npm
 
 Cómo ejecutar
 
-**Opción A: Con Docker Compose (recomendado)**
-
-```bash
-# Desde la raíz del proyecto
-docker-compose up --build
-```
-
-- Backend: `http://localhost:8000`
-- Frontend: `http://localhost` (puerto 80)
-- Ambos contenedores se comunican automáticamente
-
-Para detener: `docker-compose down`
-
-**Opción B: Local (desarrollo sin Docker)**
+**Local (desarrollo)**
 
 1) Backend
 
