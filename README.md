@@ -33,17 +33,33 @@ Cómo ejecutar
 
 **Local (desarrollo)**
 
-1) Backend
+## 1) Configurar variables de entorno
+
+Antes de ejecutar el backend o frontend, debes crear los archivos:
+
+### 1) `backend/.env`
+
+```env
+DATABASE_URL=sqlite:///./test.db
+ALLOWED_ORIGINS=http://localhost:5173
+```
+Luego se puede ejecutar el backend desde el local. 
+En Railway → cambia ALLOWED_ORIGINS por su dominio correspondiente.
 
 ```bash
 cd backend
 python -m pip install -r requirements.txt
 python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
-
 La API quedará en `http://localhost:8000` (health: `GET /health`).
 
-2) Frontend (en otra terminal)
+### 2) `frontend/.env`
+
+```env
+VITE_API_BASE=http://localhost:8000
+```
+Luego se puede ejecutar el frontend desde el local. 
+En producción → reemplaza por el URL del backend desplegado.
 
 ```bash
 cd frontend
@@ -86,8 +102,9 @@ Diseño de modelos (resumen)
 Cómo se calculan los algoritmos (resumen técnico)
 
 1) Scoring de sostenibilidad (Service: `SustainabilityService`)
-	- Heurística: combina factores nutricionales y NOVA/category heuristics para producir un score entre 0 (mejor) y 100 (peor).
+	- Heurística: combina factores nutricionales y NOVA/category heuristics para producir un score entre 0 (peor) y 100 (mejor).
 	- Variables consideradas: azúcares, grasas saturadas, sodio, calorías, grado de procesamiento (NOVA), etc.
+ 	- Este cálculo es heurístico para efectos del prototipo y no corresponde a LCA real.
 
 2) Mochila multi-objetivo (Service: `MultiObjectiveKnapsack`)
 	- Implementación: programación dinámica 0/1 (DP) que maximiza la suma de `value` (aquí usamos el `sustainability_score`) sujeta a la restricción `price <= budget`.
@@ -107,10 +124,11 @@ Cómo se calculan los algoritmos (resumen técnico)
 Dataset de ejemplo
 
 - `backend/data/prices.json` incluye ~20-25 productos con `barcode, name, brand, size, price`.
+- Destacar que la creación del dataset fue manual debido a que no hay BD en precio chileno disponibles y hacer scraping (solo para este tipo de pruebas) no se pudo debido a las restricciones AntiBots de las diferentes compañias de supermercados (Santa Isabel, Jumbo, Tottus y Lider especificamente), por ello la cantidad de datos no es la mas grande.
 
 Uso de IA
 
-- Este proyecto recibió asistencia automática de un agente (GitHub Copilot) que generó y refactorizó partes del código y ayudó con documentación. El asistente utilizado se describe como "GPT-5 mini" en los registros del desarrollo. Siempre revisa los cambios y pruebas localmente.
+- Este proyecto recibió asistencia automática de un agente (DeepSeek) que generó y refactorizó partes del código y ayudó con documentación. El asistente resolvió errores comunes de programación en adición con explicar las mejores opciones para el desarrollo exitoso del proyecto.
 
 Contacto / Autor 
 Sebastian Cifuentes
