@@ -107,43 +107,10 @@ Cómo se calculan los algoritmos (resumen técnico)
 Dataset de ejemplo
 
 - `backend/data/prices.json` incluye ~20-25 productos con `barcode, name, brand, size, price`.
-- Recomendación: ampliar a 100+ productos y, de ser posible, añadir `weight_kg` por producto para cálculos más precisos.
 
 Uso de IA
 
-- Este proyecto recibió asistencia automática de un agente (GitHub Copilot) que generó y refactorizó partes del código, propuso tests y ayudó con documentación. El asistente utilizado se describe como "GPT-5 mini" en los registros del desarrollo. Siempre revisa los cambios y pruebas localmente.
+- Este proyecto recibió asistencia automática de un agente (GitHub Copilot) que generó y refactorizó partes del código y ayudó con documentación. El asistente utilizado se describe como "GPT-5 mini" en los registros del desarrollo. Siempre revisa los cambios y pruebas localmente.
 
-Limitaciones y supuestos
-
-- Las estimaciones ambientales son heurísticas y no reemplazan un LCA profesional.
-- La precisión del cálculo depende de datos: si agregas `weight_kg` al dataset o si Open Food Facts contiene `serving_size`, el cálculo será más preciso.
-- No todos los endpoints tienen pruebas automatizadas (se recomienda añadir tests unitarios para servicios críticos).
-
-Próximos pasos recomendados (priorizados)
-
-1. Escribir `README.md` (hecho)
-2. Añadir peso/porción (`weight_kg`) al dataset o extraer `serving_size` de Open Food Facts (mejora precisión impacto)
-3. Implementar endpoint de sustituciones (recomendaciones alternativas más sostenibles y económicas)
-4. Añadir tests backend para `knapsack`, `sustainability` y `impact` (unit/integration)
-5. Dockerizar backend+frontend y desplegar en Railway/Vercel (bonus)
-
-Comandos útiles
-
-```bash
-# Backend - desarrollo
-cd backend
-pip install -r requirements.txt
-python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-
-# Frontend - desarrollo
-cd frontend
-npm install
-npm run dev
-```
-
-Contacto / Autor
-
-- Repo: local en este workspace
-- Autor: (proyecto de prueba) - verificar commits para autor principal
-
-Si quieres, continúo con: A) implementar sustituciones, B) extraer peso desde Open Food Facts, C) ampliar dataset `prices.json`, o D) crear tests y Dockerfiles. Indica la letra o combinación.
+Contacto / Autor 
+Sebastian Cifuentes
